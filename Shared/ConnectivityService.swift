@@ -13,31 +13,23 @@ import WatchConnectivity
 #endif
 
 @MainActor
+  
+
 final class ConnectivityService: NSObject {
-
     static let shared = ConnectivityService()
-
-    private override init() {
-        super.init()
-
-        #if canImport(WatchConnectivity)
-        if WCSession.isSupported() {
-            let session = WCSession.default
-            session.delegate = self
-            session.activate()
-        }
-        #endif
-    }
+    private var lastPush: Date = .distantPast
 
     func push(state: SharedTimerState) {
+        let now = Date()
+        guard now.timeIntervalSince(lastPush) > 1.0 else { return } // ✅ at most once/sec
+        lastPush = now
+
         #if canImport(WatchConnectivity)
         let session = WCSession.default
         guard session.activationState == .activated else { return }
-
         #if os(iOS)
         guard session.isPaired, session.isWatchAppInstalled else { return }
         #endif
-
         guard let data = try? JSONEncoder().encode(state) else { return }
         try? session.updateApplicationContext(["state": data])
         #endif

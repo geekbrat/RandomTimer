@@ -28,7 +28,7 @@ If you enjoy the project and want to support ongoing development:
 - **Direct-download macOS builds:** an optional “gift” link can be enabled at build time
 
 Optional gift link (external):
-- https://paypal.com/replummer
+- https://paypal.biz/REPlummer
 
 ## Build & Run (Xcode 16)
 

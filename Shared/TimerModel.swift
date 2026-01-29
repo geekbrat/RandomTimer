@@ -10,7 +10,6 @@ import Foundation
 import Combine
 
 
-
 @MainActor
 final class TimerModel: ObservableObject {
     @Published var minSeconds: Int = 300
@@ -257,11 +256,11 @@ final class TimerModel: ObservableObject {
     }
 
     private func beginTicking() {
-        stopTicking()
-        tickTask = Task {
+        tickTask?.cancel()                 // ✅ prevents duplicates
+        tickTask = Task { @MainActor in
             while !Task.isCancelled {
+                self.tick() // uses your existing completion logic
                 try? await Task.sleep(nanoseconds: 250_000_000)
-                tick()
             }
         }
     }
