@@ -14,50 +14,54 @@ import WatchConnectivity
 
 @MainActor
 final class ConnectivityService: NSObject {
+
     static let shared = ConnectivityService()
 
     private override init() {
         super.init()
+
         #if canImport(WatchConnectivity)
         if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            WCSession.default.activate()
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
         }
         #endif
     }
 
     func push(state: SharedTimerState) {
-    #if canImport(WatchConnectivity)
-    let session = WCSession.default
-    guard session.activationState == .activated else { return }
-    #if os(iOS)
-    guard session.isPaired, session.isWatchAppInstalled else { return }
-    #endif
-    guard let data = try? JSONEncoder().encode(state) else { return }
-    do {
-        try session.updateApplicationContext(["state": data])
-    } catch {
-        // Ignore transient WCSession errors (e.g., watch not ready)
+        #if canImport(WatchConnectivity)
+        let session = WCSession.default
+        guard session.activationState == .activated else { return }
+
+        #if os(iOS)
+        guard session.isPaired, session.isWatchAppInstalled else { return }
+        #endif
+
+        guard let data = try? JSONEncoder().encode(state) else { return }
+        try? session.updateApplicationContext(["state": data])
+        #endif
     }
-    #endif
 }
 
 #if canImport(WatchConnectivity)
 extension ConnectivityService: WCSessionDelegate {
+
     nonisolated func session(
         _ session: WCSession,
         activationDidCompleteWith activationState: WCSessionActivationState,
         error: Error?
     ) {}
 
-    // These two are iOS-only; watchOS does not use them.
     #if os(iOS)
     nonisolated func sessionDidBecomeInactive(_ session: WCSession) {}
     nonisolated func sessionDidDeactivate(_ session: WCSession) { session.activate() }
     #endif
 
-    nonisolated func session(_ session: WCSession,
-                             didReceiveApplicationContext applicationContext: [String : Any]) {
+    nonisolated func session(
+        _ session: WCSession,
+        didReceiveApplicationContext applicationContext: [String : Any]
+    ) {
         guard let data = applicationContext["state"] as? Data else { return }
 
         Task { @MainActor [data] in
