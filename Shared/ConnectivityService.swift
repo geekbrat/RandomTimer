@@ -27,13 +27,19 @@ final class ConnectivityService: NSObject {
     }
 
     func push(state: SharedTimerState) {
-        #if canImport(WatchConnectivity)
-        guard WCSession.default.activationState == .activated else { return }
-        if let data = try? JSONEncoder().encode(state) {
-            try? WCSession.default.updateApplicationContext(["state": data])
-        }
-        #endif
+    #if canImport(WatchConnectivity)
+    let session = WCSession.default
+    guard session.activationState == .activated else { return }
+    #if os(iOS)
+    guard session.isPaired, session.isWatchAppInstalled else { return }
+    #endif
+    guard let data = try? JSONEncoder().encode(state) else { return }
+    do {
+        try session.updateApplicationContext(["state": data])
+    } catch {
+        // Ignore transient WCSession errors (e.g., watch not ready)
     }
+    #endif
 }
 
 #if canImport(WatchConnectivity)
@@ -50,15 +56,12 @@ extension ConnectivityService: WCSessionDelegate {
     nonisolated func sessionDidDeactivate(_ session: WCSession) { session.activate() }
     #endif
 
-    nonisolated func session(
-        _ session: WCSession,
-        didReceiveApplicationContext applicationContext: [String : Any]
-    ) {
-        guard let data = applicationContext["state"] as? Data,
-              let decoded = try? JSONDecoder().decode(SharedTimerState.self, from: data)
-        else { return }
+    nonisolated func session(_ session: WCSession,
+                             didReceiveApplicationContext applicationContext: [String : Any]) {
+        guard let data = applicationContext["state"] as? Data else { return }
 
-        Task { @MainActor [decoded] in
+        Task { @MainActor [data] in
+            guard let decoded = try? JSONDecoder().decode(SharedTimerState.self, from: data) else { return }
             SharedTimerStore.shared.save(decoded)
         }
     }

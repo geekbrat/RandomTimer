@@ -7,6 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065EEE74EA829015437A2CBB /* Resources/alarm_soft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014C55F5740C370557841F14 /* Resources/alarm_soft.wav */; };
+		1B7D5D30F9FD59DE83AE0335 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40301725B490BC4D47EC4115 /* AlarmSound.swift */; };
+		2170D8F12F28529C00FDC8A0 /* SharedTimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F704792F242D8D00820D5D /* SharedTimerState.swift */; };
+		2170D8F22F28529C00FDC8A0 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7045F2F23D97800820D5D /* TimerModel.swift */; };
+		2170D8F32F28529C00FDC8A0 /* AlarmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F704612F23D97C00820D5D /* AlarmService.swift */; };
+		2170D8F42F28529C00FDC8A0 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40301725B490BC4D47EC4115 /* AlarmSound.swift */; };
+		2170D8F52F28529C00FDC8A0 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC986B9486DECDBD24885B00 /* SettingsModel.swift */; };
+		2170D8F62F28529C00FDC8A0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9B3E66BF64AA270ED273D3 /* SettingsView.swift */; };
+		2170D8F72F28529C00FDC8A0 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040576711CC8FBCB80F06F6 /* AboutView.swift */; };
+		2170D8F82F28529C00FDC8A0 /* TipJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2B704DE71BCC892193A62F /* TipJar.swift */; };
+		2170D8F92F28529C00FDC8A0 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6398207E3A7CBD3C6D9DFAB /* TipJarView.swift */; };
+		2170D8FB2F28529C00FDC8A0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B12E5D2F2833FB00E49528 /* StoreKit.framework */; };
+		2170D8FD2F28529C00FDC8A0 /* Resources/alarm_soft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014C55F5740C370557841F14 /* Resources/alarm_soft.wav */; };
+		2170D8FE2F28529C00FDC8A0 /* Resources/alarm_classic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 092BD3434085603E89D75895 /* Resources/alarm_classic.wav */; };
+		2170D8FF2F28529C00FDC8A0 /* Resources/alarm_urgent.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4F1488B897FAB799294D1C7C /* Resources/alarm_urgent.wav */; };
+		2171B6D12F2C003A00B6B9B5 /* RandomTimerWatchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 21F704472F23D14700820D5D /* RandomTimerWatchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		21B12E392F2832E500E49528 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40301725B490BC4D47EC4115 /* AlarmSound.swift */; };
+		21B12E3A2F2832E500E49528 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC986B9486DECDBD24885B00 /* SettingsModel.swift */; };
+		21B12E3B2F2832E500E49528 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9B3E66BF64AA270ED273D3 /* SettingsView.swift */; };
+		21B12E3C2F2832E500E49528 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040576711CC8FBCB80F06F6 /* AboutView.swift */; };
+		21B12E3D2F2832E500E49528 /* TipJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2B704DE71BCC892193A62F /* TipJar.swift */; };
+		21B12E3E2F2832E500E49528 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6398207E3A7CBD3C6D9DFAB /* TipJarView.swift */; };
+		21B12E3F2F2832E500E49528 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40301725B490BC4D47EC4115 /* AlarmSound.swift */; };
+		21B12E402F2832E500E49528 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC986B9486DECDBD24885B00 /* SettingsModel.swift */; };
+		21B12E412F2832E500E49528 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9B3E66BF64AA270ED273D3 /* SettingsView.swift */; };
+		21B12E422F2832E500E49528 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040576711CC8FBCB80F06F6 /* AboutView.swift */; };
+		21B12E432F2832E500E49528 /* TipJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2B704DE71BCC892193A62F /* TipJar.swift */; };
+		21B12E442F2832E500E49528 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6398207E3A7CBD3C6D9DFAB /* TipJarView.swift */; };
+		21B12E452F2832E500E49528 /* Resources/alarm_soft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014C55F5740C370557841F14 /* Resources/alarm_soft.wav */; };
+		21B12E462F2832E500E49528 /* Resources/alarm_classic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 092BD3434085603E89D75895 /* Resources/alarm_classic.wav */; };
+		21B12E472F2832E500E49528 /* Resources/alarm_urgent.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4F1488B897FAB799294D1C7C /* Resources/alarm_urgent.wav */; };
+		21B12E5E2F2833FB00E49528 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B12E5D2F2833FB00E49528 /* StoreKit.framework */; };
+		21B12E5F2F2836BC00E49528 /* SharedTimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F704792F242D8D00820D5D /* SharedTimerState.swift */; };
 		21F704602F23D97800820D5D /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7045F2F23D97800820D5D /* TimerModel.swift */; };
 		21F704622F23D97C00820D5D /* AlarmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F704612F23D97C00820D5D /* AlarmService.swift */; };
 		21F704652F23EB2000820D5D /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7045F2F23D97800820D5D /* TimerModel.swift */; };
@@ -19,18 +52,54 @@
 		21F7048A2F24350A00820D5D /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7045F2F23D97800820D5D /* TimerModel.swift */; };
 		21F7048B2F24397100820D5D /* SharedTimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F704792F242D8D00820D5D /* SharedTimerState.swift */; };
 		21F7048C2F24398200820D5D /* SharedTimerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7047D2F242DF200820D5D /* SharedTimerStore.swift */; };
-		1B7D5D30F9FD59DE83AE0335 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40301725B490BC4D47EC4115 /* AlarmSound.swift */; };
-		ED6A8A83A877C3BDED31CBB1 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC986B9486DECDBD24885B00 /* SettingsModel.swift */; };
-		C37D2F1B011D1FF80535BF07 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9B3E66BF64AA270ED273D3 /* SettingsView.swift */; };
-		C36FD8CE487F99C05DA9E51D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040576711CC8FBCB80F06F6 /* AboutView.swift */; };
 		9281B0BF0162E0852823B17E /* TipJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2B704DE71BCC892193A62F /* TipJar.swift */; };
 		B434D285566E3764A38063A4 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6398207E3A7CBD3C6D9DFAB /* TipJarView.swift */; };
-		065EEE74EA829015437A2CBB /* alarm_soft.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014C55F5740C370557841F14 /* alarm_soft.wav */; };
-		EF581CEB67032013CCE3C218 /* alarm_classic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 092BD3434085603E89D75895 /* alarm_classic.wav */; };
-		B868FB27ABCA792BFBB5EEDF /* alarm_urgent.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4F1488B897FAB799294D1C7C /* alarm_urgent.wav */; };
+		B868FB27ABCA792BFBB5EEDF /* Resources/alarm_urgent.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4F1488B897FAB799294D1C7C /* Resources/alarm_urgent.wav */; };
+		C36FD8CE487F99C05DA9E51D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040576711CC8FBCB80F06F6 /* AboutView.swift */; };
+		C37D2F1B011D1FF80535BF07 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9B3E66BF64AA270ED273D3 /* SettingsView.swift */; };
+		ED6A8A83A877C3BDED31CBB1 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC986B9486DECDBD24885B00 /* SettingsModel.swift */; };
+		EF581CEB67032013CCE3C218 /* Resources/alarm_classic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 092BD3434085603E89D75895 /* Resources/alarm_classic.wav */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2171B6D22F2C003A00B6B9B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21F704292F23CCCD00820D5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21F704462F23D14700820D5D;
+			remoteInfo = "RandomTimerWatchOS Watch App";
+		};
+		2171B6D52F2C004600B6B9B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21F704292F23CCCD00820D5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21F704462F23D14700820D5D;
+			remoteInfo = "RandomTimerWatchOS Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		2170D9002F28529C00FDC8A0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2171B6D42F2C003A00B6B9B5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2171B6D12F2C003A00B6B9B5 /* RandomTimerWatchOS Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21F704552F23D14900820D5D /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -44,6 +113,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		014C55F5740C370557841F14 /* Resources/alarm_soft.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Resources/alarm_soft.wav; sourceTree = "<group>"; };
+		092BD3434085603E89D75895 /* Resources/alarm_classic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Resources/alarm_classic.wav; sourceTree = "<group>"; };
+		2170D9042F28529C00FDC8A0 /* RandomTimer Direct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomTimer Direct.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21B12E5D2F2833FB00E49528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		21F704312F23CCCD00820D5D /* RandomTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F704472F23D14700820D5D /* RandomTimerWatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomTimerWatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F7045F2F23D97800820D5D /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
@@ -52,20 +125,33 @@
 		21F704792F242D8D00820D5D /* SharedTimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTimerState.swift; sourceTree = "<group>"; };
 		21F7047D2F242DF200820D5D /* SharedTimerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTimerStore.swift; sourceTree = "<group>"; };
 		21F704832F242E7500820D5D /* ConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityService.swift; sourceTree = "<group>"; };
-		40301725B490BC4D47EC4115 /* AlarmSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlarmSound.swift"; sourceTree = "<group>"; };
-		AC986B9486DECDBD24885B00 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsModel.swift"; sourceTree = "<group>"; };
-		8E9B3E66BF64AA270ED273D3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView.swift"; sourceTree = "<group>"; };
-		3040576711CC8FBCB80F06F6 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutView.swift"; sourceTree = "<group>"; };
-		AA2B704DE71BCC892193A62F /* TipJar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TipJar.swift"; sourceTree = "<group>"; };
-		C6398207E3A7CBD3C6D9DFAB /* TipJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TipJarView.swift"; sourceTree = "<group>"; };
-		014C55F5740C370557841F14 /* alarm_soft.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Resources/alarm_soft.wav"; sourceTree = "<group>"; };
-		092BD3434085603E89D75895 /* alarm_classic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Resources/alarm_classic.wav"; sourceTree = "<group>"; };
-		4F1488B897FAB799294D1C7C /* alarm_urgent.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Resources/alarm_urgent.wav"; sourceTree = "<group>"; };
+		3040576711CC8FBCB80F06F6 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		40301725B490BC4D47EC4115 /* AlarmSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSound.swift; sourceTree = "<group>"; };
+		4F1488B897FAB799294D1C7C /* Resources/alarm_urgent.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Resources/alarm_urgent.wav; sourceTree = "<group>"; };
+		8E9B3E66BF64AA270ED273D3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AA2B704DE71BCC892193A62F /* TipJar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJar.swift; sourceTree = "<group>"; };
+		AC986B9486DECDBD24885B00 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		C6398207E3A7CBD3C6D9DFAB /* TipJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2170D9052F28529C00FDC8A0 /* Exceptions for "RandomTimer" folder in "RandomTimer Direct" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ContentView.swift,
+				RandomTimerApp.swift,
+			);
+			target = 2170D8EF2F28529C00FDC8A0 /* RandomTimer Direct */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		21F704332F23CCCD00820D5D /* RandomTimer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2170D9052F28529C00FDC8A0 /* Exceptions for "RandomTimer" folder in "RandomTimer Direct" target */,
+			);
 			path = RandomTimer;
 			sourceTree = "<group>";
 		};
@@ -82,10 +168,19 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2170D8FA2F28529C00FDC8A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2170D8FB2F28529C00FDC8A0 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21F7042E2F23CCCD00820D5D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B12E5E2F2833FB00E49528 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +201,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21B12E5C2F2833FB00E49528 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21B12E5D2F2833FB00E49528 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		21F704282F23CCCD00820D5D = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +216,7 @@
 				21F704332F23CCCD00820D5D /* RandomTimer */,
 				21F704482F23D14700820D5D /* RandomTimerWatchOS Watch App */,
 				21F7046F2F242C0600820D5D /* RandomTimeriOS */,
+				21B12E5C2F2833FB00E49528 /* Frameworks */,
 				21F704322F23CCCD00820D5D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +227,7 @@
 				21F704312F23CCCD00820D5D /* RandomTimer.app */,
 				21F704472F23D14700820D5D /* RandomTimerWatchOS Watch App.app */,
 				21F7046E2F242C0600820D5D /* RandomTimeriOS.app */,
+				2170D9042F28529C00FDC8A0 /* RandomTimer Direct.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +246,9 @@
 				3040576711CC8FBCB80F06F6 /* AboutView.swift */,
 				AA2B704DE71BCC892193A62F /* TipJar.swift */,
 				C6398207E3A7CBD3C6D9DFAB /* TipJarView.swift */,
-				014C55F5740C370557841F14 /* alarm_soft.wav */,
-				092BD3434085603E89D75895 /* alarm_classic.wav */,
-				4F1488B897FAB799294D1C7C /* alarm_urgent.wav */,
+				014C55F5740C370557841F14 /* Resources/alarm_soft.wav */,
+				092BD3434085603E89D75895 /* Resources/alarm_classic.wav */,
+				4F1488B897FAB799294D1C7C /* Resources/alarm_urgent.wav */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -151,6 +256,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2170D8EF2F28529C00FDC8A0 /* RandomTimer Direct */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2170D9012F28529C00FDC8A0 /* Build configuration list for PBXNativeTarget "RandomTimer Direct" */;
+			buildPhases = (
+				2170D8F02F28529C00FDC8A0 /* Sources */,
+				2170D8FA2F28529C00FDC8A0 /* Frameworks */,
+				2170D8FC2F28529C00FDC8A0 /* Resources */,
+				2170D9002F28529C00FDC8A0 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				21F704332F23CCCD00820D5D /* RandomTimer */,
+			);
+			name = "RandomTimer Direct";
+			packageProductDependencies = (
+			);
+			productName = RandomTimer;
+			productReference = 2170D9042F28529C00FDC8A0 /* RandomTimer Direct.app */;
+			productType = "com.apple.product-type.application";
+		};
 		21F704302F23CCCD00820D5D /* RandomTimer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21F7043C2F23CCCE00820D5D /* Build configuration list for PBXNativeTarget "RandomTimer" */;
@@ -203,10 +331,13 @@
 				21F7046A2F242C0600820D5D /* Sources */,
 				21F7046B2F242C0600820D5D /* Frameworks */,
 				21F7046C2F242C0600820D5D /* Resources */,
+				2171B6D42F2C003A00B6B9B5 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2171B6D32F2C003A00B6B9B5 /* PBXTargetDependency */,
+				2171B6D62F2C004600B6B9B5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				21F7046F2F242C0600820D5D /* RandomTimeriOS */,
@@ -258,18 +389,29 @@
 				21F704302F23CCCD00820D5D /* RandomTimer */,
 				21F704462F23D14700820D5D /* RandomTimerWatchOS Watch App */,
 				21F7046D2F242C0600820D5D /* RandomTimeriOS */,
+				2170D8EF2F28529C00FDC8A0 /* RandomTimer Direct */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2170D8FC2F28529C00FDC8A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2170D8FD2F28529C00FDC8A0 /* Resources/alarm_soft.wav in Resources */,
+				2170D8FE2F28529C00FDC8A0 /* Resources/alarm_classic.wav in Resources */,
+				2170D8FF2F28529C00FDC8A0 /* Resources/alarm_urgent.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21F7042F2F23CCCD00820D5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				065EEE74EA829015437A2CBB /* alarm_soft.wav in Resources */,
-				EF581CEB67032013CCE3C218 /* alarm_classic.wav in Resources */,
-				B868FB27ABCA792BFBB5EEDF /* alarm_urgent.wav in Resources */,
+				065EEE74EA829015437A2CBB /* Resources/alarm_soft.wav in Resources */,
+				EF581CEB67032013CCE3C218 /* Resources/alarm_classic.wav in Resources */,
+				B868FB27ABCA792BFBB5EEDF /* Resources/alarm_urgent.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,19 +426,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				065EEE74EA829015437A2CBB /* alarm_soft.wav in Resources */,
-				EF581CEB67032013CCE3C218 /* alarm_classic.wav in Resources */,
-				B868FB27ABCA792BFBB5EEDF /* alarm_urgent.wav in Resources */,
+				21B12E452F2832E500E49528 /* Resources/alarm_soft.wav in Resources */,
+				21B12E462F2832E500E49528 /* Resources/alarm_classic.wav in Resources */,
+				21B12E472F2832E500E49528 /* Resources/alarm_urgent.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2170D8F02F28529C00FDC8A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2170D8F12F28529C00FDC8A0 /* SharedTimerState.swift in Sources */,
+				2170D8F22F28529C00FDC8A0 /* TimerModel.swift in Sources */,
+				2170D8F32F28529C00FDC8A0 /* AlarmService.swift in Sources */,
+				2170D8F42F28529C00FDC8A0 /* AlarmSound.swift in Sources */,
+				2170D8F52F28529C00FDC8A0 /* SettingsModel.swift in Sources */,
+				2170D8F62F28529C00FDC8A0 /* SettingsView.swift in Sources */,
+				2170D8F72F28529C00FDC8A0 /* AboutView.swift in Sources */,
+				2170D8F82F28529C00FDC8A0 /* TipJar.swift in Sources */,
+				2170D8F92F28529C00FDC8A0 /* TipJarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21F7042D2F23CCCD00820D5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B12E5F2F2836BC00E49528 /* SharedTimerState.swift in Sources */,
 				21F704602F23D97800820D5D /* TimerModel.swift in Sources */,
 				21F704622F23D97C00820D5D /* AlarmService.swift in Sources */,
 				1B7D5D30F9FD59DE83AE0335 /* AlarmSound.swift in Sources */,
@@ -317,12 +476,12 @@
 				21F704872F242F2400820D5D /* ConnectivityService.swift in Sources */,
 				21F704672F23EB2500820D5D /* AlarmService.swift in Sources */,
 				21F704652F23EB2000820D5D /* TimerModel.swift in Sources */,
-				1B7D5D30F9FD59DE83AE0335 /* AlarmSound.swift in Sources */,
-				ED6A8A83A877C3BDED31CBB1 /* SettingsModel.swift in Sources */,
-				C37D2F1B011D1FF80535BF07 /* SettingsView.swift in Sources */,
-				C36FD8CE487F99C05DA9E51D /* AboutView.swift in Sources */,
-				9281B0BF0162E0852823B17E /* TipJar.swift in Sources */,
-				B434D285566E3764A38063A4 /* TipJarView.swift in Sources */,
+				21B12E392F2832E500E49528 /* AlarmSound.swift in Sources */,
+				21B12E3A2F2832E500E49528 /* SettingsModel.swift in Sources */,
+				21B12E3B2F2832E500E49528 /* SettingsView.swift in Sources */,
+				21B12E3C2F2832E500E49528 /* AboutView.swift in Sources */,
+				21B12E3D2F2832E500E49528 /* TipJar.swift in Sources */,
+				21B12E3E2F2832E500E49528 /* TipJarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,18 +494,116 @@
 				21F704852F242EE300820D5D /* SharedTimerStore.swift in Sources */,
 				21F704842F242E7500820D5D /* ConnectivityService.swift in Sources */,
 				21F7047A2F242D8D00820D5D /* SharedTimerState.swift in Sources */,
-				1B7D5D30F9FD59DE83AE0335 /* AlarmSound.swift in Sources */,
-				ED6A8A83A877C3BDED31CBB1 /* SettingsModel.swift in Sources */,
-				C37D2F1B011D1FF80535BF07 /* SettingsView.swift in Sources */,
-				C36FD8CE487F99C05DA9E51D /* AboutView.swift in Sources */,
-				9281B0BF0162E0852823B17E /* TipJar.swift in Sources */,
-				B434D285566E3764A38063A4 /* TipJarView.swift in Sources */,
+				21B12E3F2F2832E500E49528 /* AlarmSound.swift in Sources */,
+				21B12E402F2832E500E49528 /* SettingsModel.swift in Sources */,
+				21B12E412F2832E500E49528 /* SettingsView.swift in Sources */,
+				21B12E422F2832E500E49528 /* AboutView.swift in Sources */,
+				21B12E432F2832E500E49528 /* TipJar.swift in Sources */,
+				21B12E442F2832E500E49528 /* TipJarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2171B6D32F2C003A00B6B9B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21F704462F23D14700820D5D /* RandomTimerWatchOS Watch App */;
+			targetProxy = 2171B6D22F2C003A00B6B9B5 /* PBXContainerItemProxy */;
+		};
+		2171B6D62F2C004600B6B9B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21F704462F23D14700820D5D /* RandomTimerWatchOS Watch App */;
+			targetProxy = 2171B6D52F2C004600B6B9B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2170D9022F28529C00FDC8A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VFT97HS8M9;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = KirstynPlummer.RandomTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		2170D9032F28529C00FDC8A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = KirstynPlummer.RandomTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
 		21F7043A2F23CCCE00820D5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -483,10 +740,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KirstynPlummer.RandomTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,10 +782,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KirstynPlummer.RandomTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,7 +825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KirstynPlummer.RandomTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -603,7 +860,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KirstynPlummer.RandomTimer.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -690,6 +947,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2170D9012F28529C00FDC8A0 /* Build configuration list for PBXNativeTarget "RandomTimer Direct" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2170D9022F28529C00FDC8A0 /* Debug */,
+				2170D9032F28529C00FDC8A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21F7042C2F23CCCD00820D5D /* Build configuration list for PBXProject "RandomTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

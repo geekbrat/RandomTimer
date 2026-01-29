@@ -1,5 +1,6 @@
 #if canImport(StoreKit) && !os(watchOS)
 import Foundation
+import Combine
 import StoreKit
 
 @MainActor

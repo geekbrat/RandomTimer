@@ -5,7 +5,6 @@
 //  Created by Kirstyn Plummer on 1/23/26.
 //
 
-
 import Foundation
 
 struct SharedTimerState: Codable, Equatable {

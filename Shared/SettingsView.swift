@@ -1,6 +1,5 @@
 #if os(iOS) || os(macOS)
 import SwiftUI
-import Combine
 
 struct SettingsView: View {
     @StateObject private var settings = SettingsModel()
