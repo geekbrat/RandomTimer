@@ -70,3 +70,53 @@ jobs:
         with:
           name: ${{ env.RESULT_BUNDLE }}
           path: ${{ env.RESULT_BUNDLE }}
+
+   build-analyze-watchos:
+    name: watchOS Build & Analyze
+    runs-on: macos-15
+
+    env:
+      SCHEME: RandomTimerWatchOS
+      CONFIGURATION: Debug
+      DESTINATION: generic/platform=watchOS
+      RESULT_BUNDLE: BuildResults-watchOS.xcresult
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "16.4"
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Cache SwiftPM
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/Library/Caches/org.swift.swiftpm
+            ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+
+      - name: Clean, Build, Analyze (watchOS)
+        run: |
+          set -eo pipefail
+          xcodebuild \
+            -scheme "$SCHEME" \
+            -configuration "$CONFIGURATION" \
+            -destination "$DESTINATION" \
+            -resultBundlePath "$RESULT_BUNDLE" \
+            clean build analyze \
+            | xcpretty
+
+      - name: Upload xcresult (watchOS)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.RESULT_BUNDLE }}
+          path: ${{ env.RESULT_BUNDLE }}         
