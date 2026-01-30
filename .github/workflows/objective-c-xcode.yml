@@ -1,30 +1,80 @@
-name: Xcode - Build and Analyze
+name: Xcode Build & Analyze
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
+
+concurrency:
+  group: xcode-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
-    name: Build and analyse default scheme using xcodebuild command
-    runs-on: macos-latest
+  build-analyze:
+    runs-on: macos-15
+
+    env:
+      # Change these to match your project
+      SCHEME: RandomTimeriOS
+      CONFIGURATION: Debug
+      DESTINATION: platform=iOS Simulator,name=iPhone 15,OS=latest
+      RESULT_BUNDLE: BuildResults.xcresult
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set Default Scheme
+
+      # Select a specific Xcode (optional but recommended for stability)
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "16.4"
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      # Speed up Swift Package resolution
+      - name: Cache SwiftPM
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/Library/Caches/org.swift.swiftpm
+            ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+
+      - name: Resolve packages (best effort)
         run: |
-          scheme_list=$(xcodebuild -list -json | tr -d "\n")
-          default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
-          echo $default | cat >default
-          echo Using default scheme: $default
-      - name: Build
-        env:
-          scheme: ${{ 'default' }}
+          set -eo pipefail
+          # Works for both .xcodeproj and .xcworkspace
+          xcodebuild -resolvePackageDependencies -scheme "$SCHEME" | xcpretty || true
+
+      - name: Clean, Build, Analyze (Simulator)
         run: |
-          if [ $scheme = default ]; then scheme=$(cat default); fi
-          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
-          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild clean build analyze -scheme "$scheme" -"$filetype_parameter" "$file_to_build" | xcpretty && exit ${PIPESTATUS[0]}
+          set -eo pipefail
+
+          # If you have an .xcworkspace, replace -project with -workspace and set the file name:
+          # xcodebuild -workspace RandomTimer.xcworkspace ...
+
+          xcodebuild \
+            -scheme "$SCHEME" \
+            -configuration "$CONFIGURATION" \
+            -destination "$DESTINATION" \
+            -resultBundlePath "$RESULT_BUNDLE" \
+            clean build analyze \
+            | xcpretty
+
+      # Turn warnings/errors in the xcresult into GitHub annotations/checks
+      - name: Annotate Xcode warnings/errors
+        uses: tbartelmess/analyze-xcode-results@v0.1.1
+        with:
+          path: ${{ env.RESULT_BUNDLE }}
+
+      - name: Upload xcresult
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.RESULT_BUNDLE }}
+          path: ${{ env.RESULT_BUNDLE }}
