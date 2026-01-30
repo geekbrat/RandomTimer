@@ -68,7 +68,7 @@ jobs:
 
       # Turn warnings/errors in the xcresult into GitHub annotations/checks
       - name: Annotate Xcode warnings/errors
-        uses: tbartelmess/analyze-xcode-results@v0.1.1
+        uses: tbartelmess/analyze-xcoderesults-action@v0.1.1
         with:
           path: ${{ env.RESULT_BUNDLE }}
 
