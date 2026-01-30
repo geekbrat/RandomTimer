@@ -1,6 +1,9 @@
 # Random Timer
 
 [![CI](https://github.com/geekbrat/RandomTimer/actions/workflows/objective-c-xcode.yml/badge.svg)](https://github.com/geekbrat/RandomTimer/actions/workflows/objective-c-xcode.yml)
+[![CI](https://github.com/geekbrat/RandomTimer/actions/workflows/xcode-build-analyze.yml/badge.svg)](https://github.com/geekbrat/RandomTimer/actions/workflows/xcode-build-analyze.yml)
+![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20watchOS-blue)
+![Apple Watch](https://img.shields.io/badge/Apple%20Watch-compatible-000000?logo=apple&logoColor=white)
 
 Random Timer is a simple, “picky-friendly” random countdown timer: instead of alerting after a fixed interval, it alerts at a **random moment within a range** you choose. It’s built with SwiftUI for iOS, watchOS, and macOS.
 
