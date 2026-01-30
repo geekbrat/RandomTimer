@@ -53,13 +53,16 @@ jobs:
             clean build analyze \
             | xcpretty
 
-      - name: Annotate Xcode warnings/errors
-        if: always()
-        uses: tbartelmess/analyze-xcoderesults-action@0.1.1
+      - name: Publish Xcode annotations
+        if: ${{ !cancelled() }}
+        uses: gmazzo/publish-report-annotations@v1
         with:
-          results: ${{ env.RESULT_BUNDLE }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          warningAnnotations: true
+          # This action scans report paths; point it at your xcresult
+          reports:
+            ${{ env.RESULT_BUNDLE }}
+
+          # Optional: fail the job if analyzer produced errors (keep false if you prefer “warnings only”)
+          failOnError: false
 
       - name: Upload xcresult
         if: always()
