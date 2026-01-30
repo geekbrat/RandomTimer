@@ -76,7 +76,7 @@ jobs:
     runs-on: macos-15
 
     env:
-      SCHEME: RandomTimerWatchOS
+      SCHEME: RandomTimerWatchOS Watch App
       CONFIGURATION: Debug
       DESTINATION: generic/platform=watchOS
       RESULT_BUNDLE: BuildResults-watchOS.xcresult
