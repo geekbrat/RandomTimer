@@ -13,18 +13,17 @@ concurrency:
 jobs:
   build-analyze:
     runs-on: macos-15
-    
+
     env:
       SCHEME: RandomTimeriOS
       CONFIGURATION: Debug
-      DESTINATION: platform=iOS Simulator,name=iPhone 17
+      DESTINATION: platform=iOS Simulator
       RESULT_BUNDLE: BuildResults.xcresult
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Select a specific Xcode (optional but recommended for stability)
       - name: Select Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
@@ -33,7 +32,6 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      # Speed up Swift Package resolution
       - name: Cache SwiftPM
         uses: actions/cache@v4
         with:
@@ -44,16 +42,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-spm-
 
-      - name: Resolve packages (best effort)
+      - name: Clean, Build, Analyze
         run: |
           set -eo pipefail
-          # Works for both .xcodeproj and .xcworkspace
-          xcodebuild -resolvePackageDependencies -scheme "$SCHEME" | xcpretty || true
-
-      - name: Clean, Build, Analyze (Simulator)
-        run: |
-          set -eo pipefail
-
           xcodebuild \
             -scheme "$SCHEME" \
             -configuration "$CONFIGURATION" \
@@ -62,7 +53,6 @@ jobs:
             clean build analyze \
             | xcpretty
 
-      # Turn warnings/errors in the xcresult into GitHub annotations/checks
       - name: Annotate Xcode warnings/errors
         if: always()
         uses: tbartelmess/analyze-xcoderesults-action@0.1.1
