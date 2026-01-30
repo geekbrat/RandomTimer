@@ -71,7 +71,7 @@ jobs:
           name: ${{ env.RESULT_BUNDLE }}
           path: ${{ env.RESULT_BUNDLE }}
 
-   build-analyze-watchos:
+  build-analyze-watchos:
     name: watchOS Build & Analyze
     runs-on: macos-15
 
