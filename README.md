@@ -1,8 +1,17 @@
 # Random Timer
 
+[![CI](https://github.com/geekbrat/RandomTimer/actions/workflows/xcode-build-analyze.yml/badge.svg)](https://github.com/geekbrat/RandomTimer/actions/workflows/xcode-build-analyze.yml)
+
 Random Timer is a simple, “picky-friendly” random countdown timer: instead of alerting after a fixed interval, it alerts at a **random moment within a range** you choose. It’s built with SwiftUI for iOS, watchOS, and macOS.
 
 > © 2026 Kirstyn Piper Plummer. All rights reserved.
+
+
+## About Random Timer
+
+Random Timer is a deliberately simple tool designed to interrupt predictability.
+
+Instead of a fixed interval, it alerts you at a random moment within a range you choose. That unpredictability can help with focus breaks, habit disruption, accessibility cues, and any workflow that benefits from time prompts you can’t anticipate.
 
 ## Features
 
@@ -22,13 +31,13 @@ Included alarm sounds live in the Shared resources and are bundled into the iOS/
 
 ## Support the Developer
 
-If you enjoy the project and want to support ongoing development:
+If you enjoy Random Timer and want to help support continued development, you can support the developer.
 
 - **iOS / Mac App Store builds:** tip-jar uses StoreKit (App Store compliant)
 - **Direct-download macOS builds:** an optional “gift” link can be enabled at build time
 
 Optional gift link (external):
-- https://paypal.biz/REPlummer
+- https://paypal.com/replummer
 
 ## Build & Run (Xcode 16)
 
