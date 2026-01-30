@@ -17,7 +17,7 @@ jobs:
     env:
       SCHEME: RandomTimeriOS
       CONFIGURATION: Debug
-      DESTINATION: platform=iOS,name=Any iOS Device
+      DESTINATION: platform=iOS Simulator,OS=18.5,name=iPhone 16
       RESULT_BUNDLE: BuildResults.xcresult
 
     steps:
