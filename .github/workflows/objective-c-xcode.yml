@@ -13,12 +13,11 @@ concurrency:
 jobs:
   build-analyze:
     runs-on: macos-15
-
+    
     env:
-      # Change these to match your project
       SCHEME: RandomTimeriOS
       CONFIGURATION: Debug
-      DESTINATION: platform=iOS Simulator,name=iPhone 15,OS=latest
+      DESTINATION: platform=iOS Simulator
       RESULT_BUNDLE: BuildResults.xcresult
 
     steps:
@@ -54,9 +53,6 @@ jobs:
       - name: Clean, Build, Analyze (Simulator)
         run: |
           set -eo pipefail
-
-          # If you have an .xcworkspace, replace -project with -workspace and set the file name:
-          # xcodebuild -workspace RandomTimer.xcworkspace ...
 
           xcodebuild \
             -scheme "$SCHEME" \
