@@ -1,7 +1,6 @@
 # Random Timer
 
 [![CI](https://github.com/geekbrat/RandomTimer/actions/workflows/objective-c-xcode.yml/badge.svg)](https://github.com/geekbrat/RandomTimer/actions/workflows/objective-c-xcode.yml)
-[![CI](https://github.com/geekbrat/RandomTimer/actions/workflows/xcode-build-analyze.yml/badge.svg)](https://github.com/geekbrat/RandomTimer/actions/workflows/xcode-build-analyze.yml)
 ![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20watchOS-blue)
 ![Apple Watch](https://img.shields.io/badge/Apple%20Watch-compatible-000000?logo=apple&logoColor=white)
 
