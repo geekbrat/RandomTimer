@@ -14,6 +14,7 @@ Random Timer is a simple, “picky-friendly” random countdown timer: instead o
 Random Timer is a deliberately simple tool designed to interrupt predictability.
 
 Instead of a fixed interval, it alerts you at a random moment within a range you choose. That unpredictability can help with focus breaks, habit disruption, accessibility cues, and any workflow that benefits from time prompts you can’t anticipate.
+<img width="2556" height="1178" alt="iPhone 16-03_About" src="https://github.com/user-attachments/assets/ea170f3c-1b30-49df-95c2-9e75bd8deaf8" />
 
 ## Features
 
