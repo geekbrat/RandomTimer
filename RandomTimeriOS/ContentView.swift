@@ -79,12 +79,16 @@ struct ContentView: View {
                     Button { showingSettings = true } label: {
                         Label("Settings", systemImage: "gearshape")
                     }
+                    .accessibilityIdentifier("Settings")
                 }
+                
                 ToolbarItem(placement: .automatic) {
                     Button { showingAbout = true } label: {
                         Label("About", systemImage: "info.circle")
                     }
+                    .accessibilityIdentifier("About")
                 }
+                
             }
             .sheet(isPresented: $showingSettings) {
                 NavigationStack {
