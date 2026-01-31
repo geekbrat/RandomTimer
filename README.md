@@ -15,8 +15,6 @@ Random Timer is a deliberately simple tool designed to interrupt predictability.
 
 Instead of a fixed interval, it alerts you at a random moment within a range you choose. That unpredictability can help with focus breaks, habit disruption, accessibility cues, and any workflow that benefits from time prompts you can’t anticipate.
 
-<img width="2556" height="1178" alt="iPhone 16-03_About" src="https://github.com/user-attachments/assets/029cb37b-d96c-450b-afcc-de142754a060" />
-
 ## Features
 
 - Pick a **minimum** and **maximum** duration, then start a timer that ends at a random time in that range
