@@ -8,18 +8,29 @@
 
 import XCTest
 
-final class Screenshots: XCTestCase {
+@MainActor
+    final class Screenshots: XCTestCase {
 
-    override func setUp() {
-        continueAfterFailure = false
-        XCUIApplication().launchArguments += ["-ui-screenshots"]
-    }
+        private var app: XCUIApplication!
+
+        override func setUp() {
+            super.setUp()
+            continueAfterFailure = false
+
+            app = XCUIApplication()
+            app.launchArguments += ["-ui-screenshots"]
+
+            // Must be called BEFORE app.launch()
+            setupSnapshot(app)
+        }
 
     func testScreenshots() {
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
 
+        XCUIDevice.shared.orientation = .portrait
+        
         // Optional: put the app into a predictable state
         // e.g. set a fixed timer range, disable randomness, etc.
         // You can implement this via launch arguments in your app.
@@ -32,6 +43,7 @@ final class Screenshots: XCTestCase {
         snapshot("02_Settings")
 
         // Navigate to About
+        app.buttons["Done"].tap()
         app.buttons["About"].tap()
         snapshot("03_About")
     }

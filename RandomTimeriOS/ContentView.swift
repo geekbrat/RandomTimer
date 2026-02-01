@@ -96,6 +96,7 @@ struct ContentView: View {
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {
                                 Button("Done") { showingSettings = false }
+                                .accessibilityIdentifier("About")
                             }
                         }
                 }
