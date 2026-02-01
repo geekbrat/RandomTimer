@@ -14,6 +14,11 @@ Random Timer is a simple, “picky-friendly” random countdown timer: instead o
 Random Timer is a deliberately simple tool designed to interrupt predictability.
 
 Instead of a fixed interval, it alerts you at a random moment within a range you choose. That unpredictability can help with focus breaks, habit disruption, accessibility cues, and any workflow that benefits from time prompts you can’t anticipate.
+<img width="2556" height="1178" alt="iPhone 16-03_About" src="https://github.com/user-attachments/assets/ea170f3c-1b30-49df-95c2-9e75bd8deaf8" />
+
+## Privacy
+
+Random Timer runs locally and avoids unnecessary data collection. No accounts, no ads, and no tracking.
 
 ## Features
 
@@ -22,6 +27,8 @@ Instead of a fixed interval, it alerts you at a random moment within a range you
 - Alarm that **rings until acknowledged**
 - Multiple alarm sounds with a selector in Settings
 - iOS ⇄ watchOS sync via WatchConnectivity (mirrors timer state)
+  
+<img width="2556" height="1178" alt="iPhone 16-01_Home" src="https://github.com/user-attachments/assets/ce1c7f79-a6e7-4e10-b477-726c52d3291f" />
 
 ## Alarm Sounds
 
@@ -30,6 +37,8 @@ Included alarm sounds live in the Shared resources and are bundled into the iOS/
 - Soft Chime
 - Classic Beep
 - Urgent Siren
+
+<img width="2556" height="1178" alt="iPhone 16-02_Settings" src="https://github.com/user-attachments/assets/28d69f43-d740-42ec-b85a-fc1c6d2a45b0" />
 
 ## Support the Developer
 
